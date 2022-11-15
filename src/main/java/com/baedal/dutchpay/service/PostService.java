@@ -40,8 +40,11 @@ public class PostService {
 
         Post post = Post.builder()
                 .title(requestDto.getTitle())
-                .content(requestDto.getContent().replace("<",">"))
-
+                .content(requestDto.getContent())
+                .location(requestDto.getLocation())
+                .pay(requestDto.getPay())
+                .when(requestDto.getWhen())
+                .num(requestDto.getNum())
                 .member(member)
                 .build();
 

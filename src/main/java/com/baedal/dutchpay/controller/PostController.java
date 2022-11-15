@@ -21,10 +21,15 @@ public class PostController {
                                      HttpServletRequest request) {
         return postService.createPost(requestDto, request);
     }
-
+    //게시글전체조회
     @GetMapping(value = "/api/post")
     public ResponseDto<?> getAllPosts(@PageableDefault(page = 0, size = 10, sort = "title", direction = Sort.Direction.DESC) Pageable pageable) {
         return postService.getAllPost(pageable);
+    }
+    //게시글 하나만조회
+    @GetMapping(value = "/post/{id}")
+    public ResponseDto<?> getPost(@PathVariable Long id) {
+        return postService.getPost(id);
     }
 
     // 게시글 수정
