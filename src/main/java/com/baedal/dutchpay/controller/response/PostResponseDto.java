@@ -18,7 +18,7 @@ public class PostResponseDto {
     private String author;
     private String location;
     private Long pay;
-    private String when;
+    private String time;
     private Long num;
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;

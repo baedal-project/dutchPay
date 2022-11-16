@@ -14,7 +14,7 @@ public class PostRequestDto {
     private String content;
     private String location;
     private Long pay;
-    private String when;
+    private String time;
     private Long num;
 
 //  private boolean deleted = false;
