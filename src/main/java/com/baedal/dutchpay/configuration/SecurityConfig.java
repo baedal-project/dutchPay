@@ -81,6 +81,7 @@ public class SecurityConfig {
                 // 로그인, 회원가입 허용
                 .antMatchers(HttpMethod.POST, "/api/members/login").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/members/signup").permitAll()
+                .antMatchers("/api/post/**").permitAll()
                 .antMatchers("/webjars/**").permitAll()
                 // 이외에는 모두 인증 필요
                 .anyRequest().authenticated();

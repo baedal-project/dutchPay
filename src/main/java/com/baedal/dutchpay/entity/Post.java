@@ -31,7 +31,7 @@ public class Post extends Timestamped {
     private Long pay;
 
     @Column(nullable = false)
-    private String when;
+    private String time;
 
     @Column(nullable = false)
     private Long num;
@@ -45,7 +45,7 @@ public class Post extends Timestamped {
         this.location = postRequestDto.getLocation();
         this.num = postRequestDto.getNum();
         this.pay = postRequestDto.getPay();
-        this.when = postRequestDto.getWhen();
+        this.time = postRequestDto.getTime();
     }
 
     public boolean validateMember(Member member) {

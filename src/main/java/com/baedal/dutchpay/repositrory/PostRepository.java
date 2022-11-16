@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PostRepository extends JpaRepository<Post, Long> {
-    List<Post> findAllByMember_Id(Long id);
+//    List<Post> findAllByMember_Id(Long id);
     Optional<Post> findById(Long id);
     Page<Post> findAll(Pageable pageable);
 
